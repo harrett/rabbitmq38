@@ -1,0 +1,14 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# docker
+rabbitmq38/*
+#rabbitmq38/!.gitkeep
+
+# Except this file
+!.gitignore

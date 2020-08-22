@@ -1,0 +1,17 @@
+version: "3"
+services:
+    rabbitmq:
+        image: rabbitmq38
+        build:
+            context: .
+        container_name: rabbitmq38
+        hostname: rabbitmq38
+        restart: always
+        environment:
+            RABBITMQ_DEFAULT_USER: admin
+            RABBITMQ_DEFAULT_PASS: admin
+        volumes:
+            - ./plugins:/opt/rabbitmq/plugins
+            - ./rabbitmq38:/var/lib/rabbitmq/mnesia/rabbit@rabbitmq38
+        ports:
+            - "9672:15672"
